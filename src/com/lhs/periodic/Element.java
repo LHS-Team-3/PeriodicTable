@@ -28,7 +28,10 @@ public enum Element {
 		this.atomicMass = atomicMass;
 		this.electronegativity = electronegativity;
 		this.atomicRadius = atomicRadius;
-		int valenceElectrons = 0;//TODO: find valence electrons
+		//find valence electrons
+		int valenceElectrons = number;
+		if (number>2) number-=2;
+		while (number>8) number-=8;
 		this.valenceElectrons = valenceElectrons;
 		this.ionizationEnergy = ionizationEnergy;
 	}
