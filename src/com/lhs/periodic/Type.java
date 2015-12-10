@@ -1,0 +1,17 @@
+package com.lhs.periodic;
+
+public enum Type {
+	
+	HALOGEN,
+	ALKALI_METAL,
+	ALKALI_EARTH_METAL,
+	TRANSITION_METAL,
+	NONMETAL,
+	LANTHANIDE,
+	ACTINIDE,
+	BASIC_METAL,
+	SEMI_METAL,
+	NOBLE_GAS;
+	
+	
+}
