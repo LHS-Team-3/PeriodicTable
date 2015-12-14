@@ -1,0 +1,32 @@
+{
+
+"Hydrogen": {
+	"number":1,
+	"protons":1,
+	"electrons":1,
+	"energyLevels":1,
+	"type":NONMETAL,
+	"symbol":"H",
+	"atomicMass":1.01,
+	"electronegativity":2.2,
+	"atomicRadius":53,
+	"ionizationEnergy":1312,
+	"group":1,
+	"period":1
+},
+"Helium": {
+	"number":2,
+	"protons":2,
+	"electrons":2,
+	"energyLevels":1,
+	"type":NOBLE_GAS,
+	"symbol":"He",
+	"atomicMass":4.00,
+	"electronegativity":0,
+	"atomicRadius":31,
+	"ionizationEnergy":2372,
+	"group":18,
+	"period":1
+}
+
+}
