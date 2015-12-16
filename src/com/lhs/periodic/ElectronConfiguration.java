@@ -31,7 +31,16 @@ public class ElectronConfiguration {
     }
     
     public int getValence() {
-        return energyLevels.get(highestLevel+"s")+energyLevels.get(highestLevel+"p")+energyLevels.get(highestLevel+"d")+energyLevels.get(highestLevel+"f");
+        return energyLevels.get(highestLevel+"s")+
+        		(highestLevel>1 ? energyLevels.get(highestLevel+"p") : 0)+
+        		(highestLevel>2 ? energyLevels.get(highestLevel+"d") : 0)+
+        		(highestLevel>3 ? energyLevels.get(highestLevel+"f") : 0);
+    }
+    
+    public int getLevels() {
+    	int ans = 0;
+    	for (Integer i : energyLevels.values()) if (i!=0) ans++; else break;
+    	return ans;
     }
     
     public static int getCapacity(String level) { return level.charAt(1)=='s' ? 2 : level.charAt(1)=='p' ? 6 : level.charAt(1)=='d' ? 10 : 14; }
