@@ -1,10 +1,9 @@
 package com.lhs.periodic;
 
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.json.JSONObject;
 
@@ -22,11 +21,15 @@ public class Utils {
 	 * @return The valence electrons.
 	 */
 	public static int getValence(int electrons) {
-		//TODO: FIX THIS!
-		int valenceElectrons = electrons;
-		if (electrons>2) electrons-=2;
-		while (electrons>8) electrons-=8;
-		return valenceElectrons;
+		ElectronConfiguration config = new ElectronConfiguration(electrons);
+		return config.getValence();
+	}
+	
+	public static Element fromShort(String symbol) {
+		for (Element e : Element.values()) {
+			if (e.symbol.equals(symbol)) return e;
+		}
+		throw new NoSuchElementException("Element with symbol "+symbol+" does not exist!");
 	}
 	
 	static String readFile(String path) {
